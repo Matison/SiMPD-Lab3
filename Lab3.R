@@ -1,0 +1,7 @@
+library(ahp)
+cameraAhp <- Load('C:/Users/Matison/Desktop/SiMPD/aparaty.ahp')
+Calculate(cameraAhp)
+print(cameraAhp, priority = function(x) x$sparent$priority["total", x$name])
+Visualize(cameraAhp)
+Analyze(cameraAhp)
+AnalyzeTable(cameraAhp)

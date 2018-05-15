@@ -1,0 +1,88 @@
+1  Zakup aparatu                              NA
+2   ¦--Wydajnosc                              NA
+3   ¦   ¦--Sony Alpha a6300                   NA
+4   ¦   ¦--Sony Alpha a5100                   NA
+5   ¦   ¦--Sony Alpha a6000                   NA
+6   ¦   ¦--Sony Alpha a7 II                   NA
+7   ¦   ¦--Sony Alpha a7K - ILCE-7K           NA
+8   ¦   ¦--Fujifilm X-A10                     NA
+9   ¦   ¦--Panasonic DC-GH5S                  NA
+10  ¦   ¦--Panasonic Lumix DMC-G7 14-42       NA
+11  ¦   ¦--Panasonic Lumix DMC-G80            NA
+12  ¦   ¦--Panasonic Lumix DMC-GX80           NA
+13  ¦   ¦--Panasonic Lumix DMC-GX800K         NA
+14  ¦   °--Panasonic Lumix DMC-G7             NA
+15  ¦--Jakosc                                 NA
+16  ¦   ¦--Sony Alpha a6300                   NA
+17  ¦   ¦--Sony Alpha a5100                   NA
+18  ¦   ¦--Sony Alpha a6000                   NA
+19  ¦   ¦--Sony Alpha a7 II                   NA
+20  ¦   ¦--Sony Alpha a7K - ILCE-7K           NA
+21  ¦   ¦--Fujifilm X-A10                     NA
+22  ¦   ¦--Panasonic DC-GH5S                  NA
+23  ¦   ¦--Panasonic Lumix DMC-G7 14-42       NA
+24  ¦   ¦--Panasonic Lumix DMC-G80            NA
+25  ¦   ¦--Panasonic Lumix DMC-GX80           NA
+26  ¦   ¦--Panasonic Lumix DMC-GX800K         NA
+27  ¦   °--Panasonic Lumix DMC-G7             NA
+28  ¦--Styl                                   NA
+29  ¦   ¦--Sony Alpha a6300                   NA
+30  ¦   ¦--Sony Alpha a5100                   NA
+31  ¦   ¦--Sony Alpha a6000                   NA
+32  ¦   ¦--Sony Alpha a7 II                   NA
+33  ¦   ¦--Sony Alpha a7K - ILCE-7K           NA
+34  ¦   ¦--Fujifilm X-A10                     NA
+35  ¦   ¦--Panasonic DC-GH5S                  NA
+36  ¦   ¦--Panasonic Lumix DMC-G7 14-42       NA
+37  ¦   ¦--Panasonic Lumix DMC-G80            NA
+38  ¦   ¦--Panasonic Lumix DMC-GX80           NA
+39  ¦   ¦--Panasonic Lumix DMC-GX800K         NA
+40  ¦   °--Panasonic Lumix DMC-G7             NA
+41  °--Cena                                   NA
+42      ¦--Sony Alpha a6300                   NA
+43      ¦--Sony Alpha a5100                   NA
+44      ¦--Sony Alpha a6000                   NA
+45      ¦--Sony Alpha a7 II                   NA
+46      ¦--Sony Alpha a7K - ILCE-7K           NA
+47      ¦--Fujifilm X-A10                     NA
+48      ¦--Panasonic DC-GH5S                  NA
+49      ¦--Panasonic Lumix DMC-G7 14-42       NA
+50      ¦--Panasonic Lumix DMC-G80            NA
+51      ¦--Panasonic Lumix DMC-GX80           NA
+52      ¦--Panasonic Lumix DMC-GX800K         NA
+53      °--Panasonic Lumix DMC-G7             NA
+> Visualize(cameraAhp)
+Warning message:
+package ‘bindrcpp’ was built under R version 3.4.4 
+> Analyze(cameraAhp)
+                Weight Sony Alpha a6300 Sony Alpha a5100 Sony Alpha a6000
+1 Zakup aparatu 100.0%            16.5%            14.4%            11.1%
+2  ¦--Wydajnosc  41.7%            12.9%             9.0%             6.2%
+3  ¦--Cena       30.3%             1.6%             3.5%             2.9%
+4  ¦--Jakosc     23.6%             1.4%             1.4%             1.4%
+5  °--Styl        4.3%             0.5%             0.5%             0.5%
+  Fujifilm X-A10 Panasonic Lumix DMC-G7 14-42 Sony Alpha a7 II
+1           8.0%                         7.2%             7.1%
+2           2.1%                         1.0%             4.3%
+3           4.0%                         2.8%             1.4%
+4           1.4%                         2.8%             1.4%
+5           0.5%                         0.5%             0.0%
+  Panasonic Lumix DMC-GX80 Sony Alpha a7K - ILCE-7K Panasonic Lumix DMC-G7
+1                     6.7%                     6.4%                   6.4%
+2                     0.5%                     3.0%                   0.2%
+3                     2.8%                     2.0%                   2.8%
+4                     2.8%                     1.4%                   2.8%
+5                     0.5%                     0.0%                   0.5%
+  Panasonic Lumix DMC-G80 Panasonic Lumix DMC-GX800K Panasonic DC-GH5S
+1                    5.9%                       5.9%              4.4%
+2                    0.7%                       0.3%              1.4%
+3                    1.8%                       4.1%              0.7%
+4                    2.8%                       1.4%              2.3%
+5                    0.5%                       0.0%              0.0%
+  Inconsistency
+1          5.8%
+2         53.2%
+3          0.0%
+4            NA
+5            NA
+> AnalyzeTable(cameraAhp)

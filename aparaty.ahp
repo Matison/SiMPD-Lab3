@@ -1,0 +1,106 @@
+Version: 2.0
+Alternatives: &alternatives
+  Sony Alpha a6300:
+    cena: 4399
+    rozdzielczosc: 24.2
+    zakres: 100.51200
+    obiektyw: 1
+  Sony Alpha a5100:
+    cena: 1999
+    rozdzielczosc: 24.3
+    zakres: 100.25600
+    obiektyw: 1
+  Sony Alpha a6000:
+    cena: 2399
+    rozdzielczosc: 24.3
+    zakres: 100.25600
+    obiektyw: 1
+  Sony Alpha a7 II:
+    cena: 4999
+    rozdzielczosc: 24.3
+    zakres: 100.25600
+    obiektyw: 0
+  Sony Alpha a7K - ILCE-7K:
+    cena: 3495
+    rozdzielczosc: 24.3
+    zakres: 100.25600
+    obiektyw: 0
+  Fujifilm X-A10:
+    cena: 1739
+    rozdzielczosc: 16.3
+    zakres: 100.25600
+    obiektyw: 1
+  Panasonic DC-GH5S:
+    cena: 10199
+    rozdzielczosc: 10.2
+    zakres: 160.51200
+    obiektyw: 0
+  Panasonic Lumix DMC-G7 14-42:
+    cena: 2499
+    rozdzielczosc: 16.0
+    zakres: 200.25600
+    obiektyw: 1
+  Panasonic Lumix DMC-G80:
+    cena: 3849
+    rozdzielczosc: 16.0
+    zakres: 200.25600
+    obiektyw: 1
+  Panasonic Lumix DMC-GX80:
+    cena: 2449
+    rozdzielczosc: 16.0
+    zakres: 200.25600
+    obiektyw: 1
+  Panasonic Lumix DMC-GX800K:
+    cena: 1699
+    rozdzielczosc: 16.84
+    zakres: 100.25600
+    obiektyw: 0
+  Panasonic Lumix DMC-G7:
+    cena: 2499
+    rozdzielczosc: 16.0
+    zakres: 200.25600
+    obiektyw: 1
+
+Goal:
+# The goal spans a tree of criteria and the alternatives
+  name: Zakup aparatu
+  description: >
+    This is a classic single decision maker problem. It models
+    the situation facing by a family that wants to buy a new fridge.
+  preferences:
+    # preferences are typically defined pairwise
+    # 1 means: A is equal to B
+    # 9 means: A is highly preferrable to B
+    # 1/9 means: B is highly preferrable to A
+    pairwise:
+      - [Wydajnosc, Jakosc, 3]
+      - [Wydajnosc, Styl, 7]
+      - [Wydajnosc, Cena, 1]
+      - [Jakosc, Styl, 7]
+      - [Jakosc, Cena, 1]
+      - [Styl, Cena, 1/7]
+  children: 
+    Wydajnosc: 
+      preferences:
+        pairwiseFunction: 
+            function(a1, a2) max(9, min(1/9, a2$rozdzielczosc/a1$rozdzielczosc))
+      children: *alternatives
+    Jakosc: 
+      preferences:
+        scoreFunction:
+            function(a) a$zakres
+      children: *alternatives
+    Styl: 
+      preferences:
+        scoreFunction: 
+            function(a) a$obiektyw
+      children: *alternatives
+    Cena: 
+      preferences:
+        pairwiseFunction: 
+            function(a1, a2) min(9, max(1/9, a2$cena/a1$cena))
+      children: *alternatives
+
+#
+# End of Goal Section
+#####################################
